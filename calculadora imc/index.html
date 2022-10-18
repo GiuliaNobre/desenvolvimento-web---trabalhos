@@ -1,48 +1,78 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+    <title>Calculadora Imc</title>
+    <head>
+
 <body>
     <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="container">
-        <h1>Calcula Imc</h1>
-        <form class="fundo">
-            <label for=""></label>
-            <input type="text" placeholder="nome" id="nome">
-        </form>
-        <form class="fundo">
-            <label for=""></label>
-            <input type="number" placeholder="peso" id="peso">
-        </form>
-        <form class="fundo">
-            <label for=""></label>
-            <input type="number" placeholder="altura" id="altura">
-        </form>
+   
+
     
-        <button class="bt" onclick="calculaImc()"> calcular </button>
-        <div id="resultado">  </div>
-    
-        <script>
-            function calculaImc() {
+        <div class="container">
+            <h1>Calcula Imc</h1>
+            <form class="fundo">
+                <label for=""></label>
+                <input type="text" placeholder="nome" id="nome">
+            </form>
+            <form class="fundo">
+                <label for=""></label>
+                <input type="number" placeholder="peso" id="peso">
+            </form>
+            <form class="fundo">
+                <label for=""></label>
+                <input type="number" placeholder="altura" id="altura">
+            </form>
+
+            <button class="bt" onclick="calculaimc"> calcular </button>
+            <div id="resultado"> </div>
+
+            <script>
+           function calculaimc() { 
                 const peso = document.getElementById(`peso`).value;
                 const altura = document.getElementById(`altura`).value;
-                const calculo = peso / (altura * altura)
+                const calculoImc = peso / (altura * altura);
+                let estadoSaude = "";
+
                 
-                if (peso) {
-                    
+
+
+                    if (calculoImc < 15.99) {
+                        estadoSaude = "Magreza Grave";
+                    }
+                    else if (calculoImc >= 16 && calculo <= 16.99) {
+                        estadoSaude = "Magreza Moderada";
+                    }
+                    else if (calculoImc >= 17 && calculo <= 18.5) {
+                        estadoSaude = "Magreza Leve";
+                    }
+
+                    else if (calculoImc >= 18.5 && calculo <= 24.9) {
+                        estadoSaude = "Saudavel";
+                    }
+                    else if (calculoImc >= 25 && calculo <= 29.9) {
+                        estadoSaude = "Sobrepeso";
+                    }
+                    else if (calculoImc >= 30 && calculo <= 34.9) {
+                        estadoSaude = "Obesidade grau 1";
+                    }
+                    else if (calculoImc >= 35 && calculo <= 39.9) {
+                        estadoSaude = "Obesidade grau 2";
+                    }
+                    else if (calculoImc >= 40) {
+                        estadoSaude = "Sobrepeso";
+                    }
+                    document.getElementById(`resultado`).innerHTML = `O imc: ${calculaimc.toFixed(2)} seu estado de saúde: ${estadoSaude}`
                 }
-                
-                document.getElementById('resultado').innerHTML = ``;
-            }
-        </script>
-    </div>
-  
-</body>
+
+
+            </script>
+        </div>
+
+    </body>
+
 </html>
-      
