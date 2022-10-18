@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Calcula Imc</h1>
+        <form class="fundo">
+            <label for=""></label>
+            <input type="text" placeholder="nome" id="nome">
+        </form>
+        <form class="fundo">
+            <label for=""></label>
+            <input type="number" placeholder="peso" id="peso">
+        </form>
+        <form class="fundo">
+            <label for=""></label>
+            <input type="number" placeholder="altura" id="altura">
+        </form>
+    
+        <button class="bt" onclick="calculaImc()"> calcular </button>
+        <div id="resultado">  </div>
+    
+        <script>
+            function calculaImc() {
+                const peso = document.getElementById(`peso`).value;
+                const altura = document.getElementById(`altura`).value;
+                const calculo = peso / (altura * altura)
+                
+                if (peso) {
+                    
+                }
+                
+                document.getElementById('resultado').innerHTML = ``;
+            }
+        </script>
+    </div>
+  
+</body>
+</html>
+      
