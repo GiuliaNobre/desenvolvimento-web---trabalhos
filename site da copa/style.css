@@ -1,0 +1,24 @@
+.cor1 {
+    background-color: white;
+    }
+    .cor2 {
+        background-color: white;
+        }
+    
+      
+      .fundo{
+        background-image: linear-gradient(to right, rgb(0, 1, 7), rgb(88, 6, 6));
+      }
+
+     
+      h1{
+       
+       padding: 100px;
+       
+      
+    }
+    .carousel-inner{
+        padding: 0 500px ;
+        
+        
+    }
